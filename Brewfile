@@ -25,17 +25,17 @@ cask 'font-sf-compact'
 
 # App Store
 brew 'mas'
-mas 409183694  #Keynote
-mas 409201541  #Pages
-mas 409203825  #Numbers
-mas 411643860  #DaisyDisk
-mas 425424353  #The Unarchiver
-mas 462054704  #Microsoft Word
-mas 462058435  #Microsoft Excel
-mas 539883307  #LINE
-mas 545519333  #Prime Video
-mas 640199958  #Developer
-mas 803453959  #Slack
-mas 897118787  #Shazam
-mas 1355679052  #Dropover
-mas 1480068668  #Messenger
+mas 'Keynote', id: 409183694
+mas 'Pages', id: 409201541
+mas 'Numbers', id: 409203825
+mas 'DaisyDisk', id: 411643860
+mas 'The Unarchiver', id: 425424353
+mas 'Microsoft Word', id: 462054704
+mas 'Microsoft Excel', id: 462058435
+mas 'LINE', id: 539883307
+mas 'Prime Video', id: 545519333
+mas 'Developer', id: 640199958
+mas 'Slack', id: 803453959
+mas 'Shazam', id: 897118787
+mas 'Dropover', id: 1355679052
+mas 'Messenger', id: 1480068668
