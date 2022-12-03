@@ -1,7 +1,9 @@
 # CLI Tool
 brew 'ffmpeg'
 brew 'git'
+brew 'git-lfs'
 brew 'mint'
+brew 'robotsandpencils/made/xcodes'
 
 # Cask
 tap 'homebrew/cask'
