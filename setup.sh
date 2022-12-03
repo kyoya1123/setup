@@ -16,3 +16,6 @@ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 
 #dockのアニメーションのスピード
 defaults write com.apple.dock "autohide-time-modifier" -float "0" && killall Dock
+
+mv Preferences/*.plist ~/Library/Preferences
+mv Preferences/UserData ~/Library/Developer/Xcode
