@@ -24,9 +24,17 @@ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 defaults write com.apple.dock "autohide-time-modifier" -float "0" && killall Dock
 
 # System and apps preference
-mv Preferences/*.plist ~/Library/Preferences
-mv Preferences/.GlobalPreferences.plist ~/Library/Preferences
+defaults import .GlobalPreferences Preferences/.GlobalPreferences.plist
+
+dir_path="Preferences/*"
+dirs="find $dir_path"
+
+for dir in $dirs;
+do
+    file_name=$(basename $dir)
+    eval "defaults import ${base_name//.plist/} $dir"
+done
 
 #Snippet, Color Theme, etc
 rm -d -r ~/Library/Developer/Xcode/UserData
-mv Preferences/UserData ~/Library/Developer/Xcode
+mv UserData ~/Library/Developer/Xcode
