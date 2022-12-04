@@ -32,7 +32,7 @@ dirs="find $dir_path"
 for dir in $dirs;
 do
     file_name=$(basename $dir)
-    eval "defaults import ${base_name//.plist/} $dir"
+    eval "defaults import ${file_name//.plist/} $dir"
 done
 
 #Snippet, Color Theme, etc
