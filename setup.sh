@@ -20,9 +20,6 @@ echo "Install Latest Xcode"
 xcodes install --latest
 sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 
-# Animation Speed of Dock
-defaults write com.apple.dock "autohide-time-modifier" -float "0" && killall Dock
-
 # System and apps preference
 defaults import .GlobalPreferences Preferences/.GlobalPreferences.plist
 
