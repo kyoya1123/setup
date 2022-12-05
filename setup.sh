@@ -2,7 +2,6 @@
 mv .zshrc ~
 
 # ssh
-mv ssh .ssh
 mv .ssh ~
 chmod 0600 ~/.ssh/id_rsa
 
