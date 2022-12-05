@@ -24,9 +24,7 @@ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 defaults import .GlobalPreferences Preferences/.GlobalPreferences.plist
 
 dir_path="Preferences/*"
-dirs="find $dir_path"
-
-for dir in $dirs;
+for dir in $dir_path;
 do
     file_name=$(basename $dir)
     eval "defaults import ${file_name//.plist/} $dir"
