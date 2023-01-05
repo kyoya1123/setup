@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>82C8CD52-72C1-4566-8E04-22AC6A3A544A</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>all</string>
+			<key>text</key>
+			<string>日曜A全シート</string>
+			<key>url</key>
+			<string>https://docs.google.com/spreadsheets/d/1U2LAvAdyK1eo2xiHwmXgnZyoaSp_TlfAWY9fmlyVsos/edit#gid=2063531029</string>
+		</dict>
+		<key>F36C2406-6BDB-4B1F-9BF1-15537FC149C2</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>sol</string>
+			<key>text</key>
+			<string>SOL</string>
+			<key>url</key>
+			<string>https://sol.sfc.keio.ac.jp</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

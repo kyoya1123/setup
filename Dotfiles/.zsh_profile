@@ -1,0 +1,5 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH=/usr/local/opt/node/bin:$PATH
+
+EDITOR=/usr/bin/nano
+export EDITOR

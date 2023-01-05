@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>de.leenno.terminalfinder</string>
+	<key>connections</key>
+	<dict>
+		<key>76584C39-BB00-4E7D-9BE0-4ACCBB2829F6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7113EA2C-468F-40D5-B2AA-C7E5E3D020A4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>964C67AF-870F-420E-8B91-6079B9457583</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>17BF1163-1E8E-426C-8572-225093B55B4E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>LeEnno</string>
+	<key>description</key>
+	<string>Open currently selected Finder (or Path Finder) window in Terminal (or iTerm2) and vice versa</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>TerminalFinder</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Finder"
+    set pathList to (quoted form of POSIX path of (folder of the front window as alias))
+  end tell
+  
+  tell application "System Events"
+    if not (exists (processes where name is "Terminal")) then
+      do shell script "open -a Terminal " &amp; pathList
+    else
+      tell application "Terminal"
+        activate
+        if (count of windows) is 0 then
+          do script ("cd " &amp; pathList)
+        else
+          do script ("cd " &amp; pathList) in first window
+        end if
+      end tell
+    end if
+  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>7113EA2C-468F-40D5-B2AA-C7E5E3D020A4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>ft</string>
+				<key>subtext</key>
+				<string>Open current Finder directory in Terminal</string>
+				<key>text</key>
+				<string>Finder → Terminal</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>76584C39-BB00-4E7D-9BE0-4ACCBB2829F6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>tf</string>
+				<key>subtext</key>
+				<string>Open current Terminal directory in Finder</string>
+				<key>text</key>
+				<string>Terminal → Finder</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>964C67AF-870F-420E-8B91-6079B9457583</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Terminal"
+    do script "open -a Finder ./" in first window
+  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>17BF1163-1E8E-426C-8572-225093B55B4E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>17BF1163-1E8E-426C-8572-225093B55B4E</key>
+		<dict>
+			<key>xpos</key>
+			<real>500</real>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>7113EA2C-468F-40D5-B2AA-C7E5E3D020A4</key>
+		<dict>
+			<key>xpos</key>
+			<real>500</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>76584C39-BB00-4E7D-9BE0-4ACCBB2829F6</key>
+		<dict>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>964C67AF-870F-420E-8B91-6079B9457583</key>
+		<dict>
+			<key>xpos</key>
+			<real>300</real>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>webaddress</key>
+	<string>http://www.ienno.de</string>
+</dict>
+</plist>

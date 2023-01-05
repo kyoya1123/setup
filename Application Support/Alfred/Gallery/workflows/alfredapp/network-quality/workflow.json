@@ -1,0 +1,41 @@
+{
+  "timestamps": {
+    "added": 1654578843,
+    "modified": 1670948472
+  },
+  "bundleIDs": [
+    "com.alfredapp.vitor.networkquality",
+    "com.alfredapp.networkquality"
+  ],
+  "name": "Network Quality",
+  "description": "Test your internet connection",
+  "setupDifficulty": "minimal",
+  "codeType": "script",
+  "updatesFeed": {
+    "url": "https://github.com/alfredapp/network-quality-workflow/releases.atom",
+    "state": "b0cfa515aeae148c14ddbd3be9a0614ed3faecfdcf6e4c0f16a1fb5d4d117ef9"
+  },
+  "links": {
+    "homepage": "https://github.com/alfredapp/network-quality-workflow/",
+    "bugReports": "https://github.com/alfredapp/network-quality-workflow/issues/",
+    "alfredForum": "https://www.alfredforum.com/topic/18257-network-quality"
+  },
+  "download": {
+    "latest": {
+      "version": "2022.5",
+      "url": "https://github.com/alfredapp/gallery-workflows/raw/28a86daffc401517b2cc906c159b7c688035c83f/workflows/alfredapp/network-quality.alfredworkflow",
+      "signature": "fMLb9ivX+PNliR8f6UxpQc+wy1QlTtBKllIox+h0uwpshKgvGZZer5P40ohDX9/ly/ZeaqdbTBHaVV8O074kKd1+PJc/RxmJ7xbVfaBJeJv9NGX17bmPpTvB5dw/BmwcX/4PfxpIKJNJ9mwXpsFPZAW6BEOAKiolOj9H3a2gBpBVAE9Ha7u3wxXvCyXMptygH+KgpRQPWUX2FurNFMVXJJa/XpRt7h6B6NT1m+3fUVS6gJwzyNBf7SWngmOfDq9cw3eUG9mj4uHk6HZqc8G5UYdhJdRY+QTt6qX1MT7HL9aC+Ei05y5i4zVD8ZTEfCu9zemRPnA+ocD10yNwH4YnU0sAphZdPlZZfovlRkaKVqehAPlgoN7p/kn6ReR4Fi3OiTPAcA2EmaGHzGB+3Y87yqPXdM0VXT1FBXCOx18+rtoZlqGLAHi1L55UCclwfbIAxAa7ConMNjMPs4h/Ccg/w9j5z3YflINbWmnJ0VHBwImGE1Vp4XQcMAwMuCx16VcSQsfE3gxvbjzbN+ZJWHd//jW6urlhtTIk7G2geeWZBUoUEEY/9uduqd8d9HkcXdsuZWY1OsXupz7O1R5SJN1mDBWDr46C7THjHe7u6llMh5QjH8K8LsBKfr/HYtknoVzrJt7Kj0H9UrIxzXikScoG/lgEgR3dejPA8WJn8Km9OiM="
+    }
+  },
+  "tags": [
+    "system",
+    "speed-test"
+  ],
+  "dependencies": {
+    "minimumSystemVersion": "12",
+    "otherLanguages": [
+      "osascript (jxa)"
+    ]
+  },
+  "alfredTeamNote": "Checking is done via the `networkQuality` tool introduced in macOS Monterey."
+}

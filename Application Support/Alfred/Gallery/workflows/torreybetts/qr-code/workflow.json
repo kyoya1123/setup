@@ -1,0 +1,37 @@
+{
+  "timestamps": {
+    "added": 1662383494,
+    "modified": 1666292557
+  },
+  "bundleIDs": [
+    "torreybetts.qrcode"
+  ],
+  "name": "QR Code",
+  "description": "Generates QR codes",
+  "setupDifficulty": "minimal",
+  "codeType": "script",
+  "updatesFeed": {
+    "url": "https://github.com/TorreyBetts/Alfred-QRCode/commits/main/QR%20Code.alfredworkflow.atom",
+    "state": "7f72ec2d75c7c98bed559037fea838096b877c3971cf4eab9e9ac003a8bd3be0"
+  },
+  "links": {
+    "homepage": "https://github.com/TorreyBetts/Alfred-QRCode/",
+    "bugReports": "https://github.com/TorreyBetts/Alfred-QRCode/issues",
+    "alfredForum": "https://www.alfredforum.com/topic/16955-native-qrcode-generator/"
+  },
+  "download": {
+    "latest": {
+      "version": "1.0.3",
+      "url": "https://github.com/alfredapp/gallery-workflows/raw/64286bb2a996f44a88e286b34a33875b4c15e124/workflows/torreybetts/qr-code.alfredworkflow",
+      "signature": "jiqtaPaWw/d0SQ9Axtks9RsxbhDcXHwToiHGoxndgAfHSOUeWyEAV1RzLtVA76J5FdOlFpv+BvK6k4kkitB9N+XXtiBGUycAsFgr4r+AAcX33TSAEEGu9ovGrXK/kwrk4GvVqXhMJ09DircMEhf37Bz6FW+TRMeusADVu6Mj622suwthF+IDbFPAd+jrTYS4mFKLqf84Z5YFSOxp4OK/RI7bgDXb4/kGYwQv+a2wNaTnig7EpsrdcvYQfsxQ4TYCIw6YOfqeWk68EAC0N3WWz4CiRXOYeCdte2Q8qCefoFYlFdjoDJ3eStLKCHw9tnDsEfNvEOVplrmyip5JfzkIreBrtLU9iyi1W/iIIUZ1NWOWpdlN1WnOr0JZbIpS1Wcc5qPRtUHBZjS5cggZyuvt1hfTgP4aGqRKLICArcu1aSZ2PStTE5GC67jOSezyq8pnGwP4SWFIkZmhl/rPMBwaGXmmehThICDPWYGXdVcpkXPADPepcWVUpzVJspMF6elGLP/jR7kkiivPGZvC/kMnB2s83YvGRbqBP6RjOi39zX8zSq795iQAaUm2kuA0TcO6xmd8UBJ+X5N9bWy7mOu/bsSJtOhkAfI7wC5QDmNj9dldat+fpOWljCoIOTbmSHwILk37nSfV7jK68lkgZ406gqj+V/fdj9qyq/08eYTTZZY="
+    }
+  },
+  "tags": [
+    "qr-code"
+  ],
+  "dependencies": {
+    "otherLanguages": [
+      "osascript (as)"
+    ]
+  }
+}

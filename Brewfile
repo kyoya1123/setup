@@ -3,6 +3,7 @@ brew 'ffmpeg'
 brew 'git'
 brew 'git-lfs'
 brew 'mint'
+brew 'pure'
 brew 'robotsandpencils/made/xcodes'
 
 # Cask

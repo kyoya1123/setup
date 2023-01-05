@@ -1,0 +1,65 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 7,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#FFFFFFCB",
+        "font" : "SF Compact Text",
+        "color" : "#00000098"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "System",
+        "color" : "#0000007F"
+      },
+      "backgroundSelected" : "#6593FCB1",
+      "text" : {
+        "size" : 18,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "SF Pro Text",
+        "color" : "#000000E4"
+      },
+      "iconPaddingHorizontal" : 7,
+      "roundness" : 8,
+      "paddingVertical" : 6,
+      "iconSize" : 40
+    },
+    "search" : {
+      "backgroundSelected" : "#6493FCB2",
+      "paddingHorizontal" : 7,
+      "spacing" : 0,
+      "text" : {
+        "size" : 36,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "SF Pro Display Light",
+        "color" : "#000000FF"
+      },
+      "background" : "#00000019",
+      "roundness" : 8,
+      "paddingVertical" : 3
+    },
+    "window" : {
+      "color" : "#F8F8F86B",
+      "paddingHorizontal" : 9,
+      "width" : 700,
+      "borderPadding" : 0,
+      "borderColor" : "#0000007F",
+      "blur" : 0,
+      "roundness" : 15,
+      "paddingVertical" : 9
+    },
+    "credit" : "kyoya",
+    "visualEffectMode" : 1,
+    "separator" : {
+      "color" : "#CBCBCB00",
+      "thickness" : 7
+    },
+    "scrollbar" : {
+      "color" : "#FEFFFF73",
+      "thickness" : 3
+    },
+    "name" : "Kyoya's hyper modern"
+  }
+}

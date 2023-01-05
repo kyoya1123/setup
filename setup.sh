@@ -1,8 +1,7 @@
-# zsh
-mv .zshrc ~
+# Dotfiles
+mv Dotfiles/.[^\.]* ~
 
 # ssh
-mv .ssh ~
 chmod 0600 ~/.ssh/id_rsa
 
 # brew
