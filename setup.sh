@@ -13,6 +13,9 @@ echo "Install Homebrew Packages"
 brew tap homebrew/bundle
 brew bundle
 
+echo "Install npm packages"
+npm installl -g @anthropic-ai/claude-code @aws-amplify/cli @google/gemini-cli @luminati-io/luminati-proxy apollo corepack eas-cli firebase-tools graphql npm textlint yarn
+
 # Install Xcode, change Command Line Tool
 echo "Install Latest Xcode"
 xcodes install --latest
@@ -29,5 +32,7 @@ do
 done
 
 #Snippet, Color Theme, etc
-rm -d -r ~/Library/Developer/Xcode/UserData
-mv UserData ~/Library/Developer/Xcode
+cd ~/Library/Developer/Xcode/UserData
+git init
+git remote add origin git@github.com:kyoya1123/XcodeUserData.git
+git pull origin master
