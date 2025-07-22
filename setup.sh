@@ -14,7 +14,7 @@ brew tap homebrew/bundle
 brew bundle
 
 echo "Install npm packages"
-npm installl -g @anthropic-ai/claude-code @aws-amplify/cli @google/gemini-cli @luminati-io/luminati-proxy apollo corepack eas-cli firebase-tools graphql npm textlint yarn
+npm install -g @anthropic-ai/claude-code @aws-amplify/cli @google/gemini-cli @luminati-io/luminati-proxy apollo corepack eas-cli firebase-tools graphql npm textlint yarn
 
 # System and apps preference
 defaults import .GlobalPreferences Preferences/.GlobalPreferences.plist
@@ -30,4 +30,4 @@ done
 cd ~/Library/Developer/Xcode/UserData
 git init
 git remote add origin git@github.com:kyoya1123/XcodeUserData.git
-git pull origin master
+git pull origin main
