@@ -8,10 +8,14 @@ chmod 0600 ~/.ssh/id_rsa
 echo "Installing homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+source ~/.zshrc
+
 # brew bundle
 echo "Install Homebrew Packages"
 brew tap homebrew/bundle
 brew bundle
+
+source ~/.zshrc
 
 echo "Install npm packages"
 npm install -g @anthropic-ai/claude-code @aws-amplify/cli @google/gemini-cli @luminati-io/luminati-proxy apollo corepack eas-cli firebase-tools graphql npm textlint yarn
