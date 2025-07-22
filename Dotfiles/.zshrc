@@ -8,7 +8,7 @@ zstyle :prompt:pure:git:branch color '#42f58d'
 prompt pure
 
 # autosuggest
-source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # autocompletion
 fpath=(~/.zsh $fpath)

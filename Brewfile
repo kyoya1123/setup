@@ -11,6 +11,7 @@ brew 'jq'
 brew 'pnpm'
 brew 'yt-dlp'
 brew 'node'
+brew 'zsh-autosuggestions'
 
 # Cask
 tap 'homebrew/cask'
