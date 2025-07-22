@@ -16,11 +16,6 @@ brew bundle
 echo "Install npm packages"
 npm installl -g @anthropic-ai/claude-code @aws-amplify/cli @google/gemini-cli @luminati-io/luminati-proxy apollo corepack eas-cli firebase-tools graphql npm textlint yarn
 
-# Install Xcode, change Command Line Tool
-echo "Install Latest Xcode"
-xcodes install --latest
-sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-
 # System and apps preference
 defaults import .GlobalPreferences Preferences/.GlobalPreferences.plist
 

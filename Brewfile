@@ -10,7 +10,6 @@ brew 'imagemagick'
 brew 'jq'
 brew 'pnpm'
 brew 'yt-dlp'
-brew 'robotsandpencils/made/xcodes'
 brew 'node'
 
 # Cask
