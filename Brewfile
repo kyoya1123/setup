@@ -25,6 +25,8 @@ cask 'zoom'
 cask 'visual-studio-code'
 cask 'raycast'
 cask 'notion'
+cask 'chatgpt'
+cask 'figma'
 
 
 # Font
