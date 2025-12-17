@@ -1,0 +1,27 @@
+model = "gpt-5.2"
+model_reasoning_effort= "medium"
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+hide_agent_reasoning = true
+
+[features]
+web_search_request = true
+
+[projects."/Users/kyoya/Downloads/cl-mtg-backend-main/examples/cir_debug_web"]
+trust_level = "trusted"
+
+[projects."/Users/kyoya/Projects/cir-ios"]
+trust_level = "trusted"
+
+[projects."/Users/kyoya/Projects/coefont-frontend"]
+trust_level = "trusted"
+
+[projects."/Users/kyoya/Projects/coefont-backend"]
+trust_level = "trusted"
+
+[projects."/Users/kyoya/Projects/coefont-desktop"]
+trust_level = "trusted"
+
+[notice]
+hide_gpt5_1_migration_prompt = true
+"hide_gpt-5.1-codex-max_migration_prompt" = true

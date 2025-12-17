@@ -7,6 +7,5 @@
 # How to Update
 - `brew bundle dump`
 - `npm list -g`
-- `~/Library/Preferences`から`.GlobalPreferences.plist`, `Preferences/必要なもの`をコピー
+- Preferences更新: `scripts/export-preferences.sh`
 - Xcode Userdataをcommit & push
-

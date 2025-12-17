@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Find",
+      "Bash(find:*)",
+      "Bash(read:*)",
+      "Bash(fetch:*)",
+      "Fetch",
+      "WebFetch(domain:*)",
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Bash(cd:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "bypassPermissions"
+  },
+  "autoUpdates": true
+}

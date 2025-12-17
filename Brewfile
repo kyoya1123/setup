@@ -12,6 +12,9 @@ brew 'pnpm'
 brew 'yt-dlp'
 brew 'node'
 brew 'zsh-autosuggestions'
+brew 'zsh-syntax-highlighting'
+brew 'zsh-completions'
+brew 'fzf'
 
 # Cask
 tap 'homebrew/cask'
@@ -28,6 +31,8 @@ cask 'raycast'
 cask 'notion'
 cask 'chatgpt'
 cask 'figma'
+cask 'claude-code'
+cask 'codex'
 
 
 # Font
@@ -54,4 +59,3 @@ mas 'Messenger', id: 1480068668
 mas 'Velja', id: 1607635845
 mas 'XCFormat', id: 1165321484
 mas 'Xcode', id: 497799835
-
