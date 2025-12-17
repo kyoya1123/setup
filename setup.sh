@@ -110,7 +110,16 @@ sync_xcode_userdata() {
   mkdir -p "$dir"
 
   if [[ -d "$dir/.git" ]]; then
-    git -C "$dir" pull --rebase
+    # 強制同期: origin/main に完全に合わせる（ローカル変更は破棄）
+    if git -C "$dir" remote get-url origin >/dev/null 2>&1; then
+      git -C "$dir" remote set-url origin "$repo" >/dev/null 2>&1 || true
+    else
+      git -C "$dir" remote add origin "$repo"
+    fi
+    git -C "$dir" fetch --prune origin
+    git -C "$dir" checkout -B main
+    git -C "$dir" reset --hard origin/main
+    git -C "$dir" clean -fd
     return
   fi
 
@@ -121,6 +130,10 @@ sync_xcode_userdata() {
     mkdir -p "$dir"
   fi
   git clone "$repo" "$dir"
+  git -C "$dir" fetch --prune origin
+  git -C "$dir" checkout -B main
+  git -C "$dir" reset --hard origin/main
+  git -C "$dir" clean -fd
 }
 
 install_dotfiles
