@@ -1,7 +1,12 @@
 # How to Use
-- .sshをDotfiles内にコピー
-- terminal.appにフルディスクアクセスを許可
+- GitHubにアクセスできるSSH鍵（または同等の認証手段）を事前に用意
+- terminal.appにフルディスクアクセスを許可（Preferencesのimportで必要）
 - `$ chmod +x setup.sh`
+- `$ ./setup.sh`
+
+## 注意
+- `setup.sh` は既存のdotfiles（`~/.zshrc` など）を**上書き**します（バックアップは取りません）
+- Xcode UserData同期は `origin/main` に強制同期します（ローカル変更は破棄）
 
 
 # How to Update
