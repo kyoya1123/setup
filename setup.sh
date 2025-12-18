@@ -3,6 +3,25 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+ensure_sudo() {
+  if ! command -v sudo >/dev/null 2>&1; then
+    return
+  fi
+
+  echo "Ensure sudo session..."
+  sudo -v
+
+  # Keep sudo alive while this script is running (avoid repeated password prompts).
+  (
+    while true; do
+      sudo -n true 2>/dev/null || true
+      sleep 60
+    done
+  ) &
+  local keepalive_pid=$!
+  trap 'kill "$keepalive_pid" 2>/dev/null || true' EXIT
+}
+
 install_dotfiles() {
   echo "Install dotfiles..."
   shopt -s dotglob nullglob
@@ -104,6 +123,7 @@ sync_xcode_userdata() {
 }
 
 install_dotfiles
+ensure_sudo
 ensure_brew
 install_brew_bundle
 import_preferences
