@@ -48,7 +48,6 @@ eval_brew_shellenv() {
 install_brew_bundle() {
   echo "Install Homebrew packages..."
   eval_brew_shellenv
-  brew tap homebrew/bundle
   brew bundle --file "$ROOT_DIR/Brewfile"
 }
 
