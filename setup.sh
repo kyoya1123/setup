@@ -3,36 +3,13 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-SUDO_KEEPALIVE_PID=""
-
-cleanup_sudo_keepalive() {
-  if [[ -n "${SUDO_KEEPALIVE_PID:-}" ]]; then
-    kill "$SUDO_KEEPALIVE_PID" 2>/dev/null || true
-  fi
-}
-
 ensure_sudo() {
   if ! command -v sudo >/dev/null 2>&1; then
     return
   fi
 
-  if [[ -n "${SUDO_KEEPALIVE_PID:-}" ]] && kill -0 "$SUDO_KEEPALIVE_PID" 2>/dev/null; then
-    sudo -v
-    return
-  fi
-
   echo "Ensure sudo session..."
   sudo -v
-
-  # Keep sudo alive while this script is running (avoid repeated password prompts).
-  (
-    while true; do
-      sudo -n -v 2>/dev/null || true
-      sleep 30
-    done
-  ) &
-  SUDO_KEEPALIVE_PID=$!
-  trap cleanup_sudo_keepalive EXIT
 }
 
 install_dotfiles() {
@@ -79,7 +56,6 @@ eval_brew_shellenv() {
 
 install_brew_bundle() {
   echo "Install Homebrew packages..."
-  ensure_sudo
   eval_brew_shellenv
   brew bundle --file "$ROOT_DIR/Brewfile"
 }
