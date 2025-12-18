@@ -2,12 +2,8 @@
 brew 'ffmpeg'
 brew 'gh' 
 brew 'git'
-brew 'git-lfs'
 brew 'mint'
 brew 'pure'
-brew 'fastlane'
-brew 'imagemagick'
-brew 'jq'
 brew 'pnpm'
 brew 'yt-dlp'
 brew 'node'
@@ -15,15 +11,15 @@ brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 brew 'zsh-completions'
 brew 'fzf'
+brew 'claude-code'
+brew 'codex'
 
 # Cask
 tap 'homebrew/cask'
 cask_args appdir: '/Applications'
 cask 'appcleaner'
 cask 'discord'
-cask 'docker'
 cask 'google-chrome'
-cask 'postman'
 cask 'sf-symbols'
 cask 'zoom'
 cask 'visual-studio-code'
@@ -31,8 +27,8 @@ cask 'raycast'
 cask 'notion'
 cask 'chatgpt'
 cask 'figma'
-cask 'claude-code'
-cask 'codex'
+cask 'microsoft-teams'
+cask 'adobe-creative-cloud'
 
 
 # Font
@@ -55,7 +51,6 @@ mas 'Developer', id: 640199958
 mas 'Slack', id: 803453959
 mas 'Shazam', id: 897118787
 mas 'Dropover', id: 1355679052
-mas 'Messenger', id: 1480068668
 mas 'Velja', id: 1607635845
 mas 'XCFormat', id: 1165321484
 mas 'Xcode', id: 497799835
