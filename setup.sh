@@ -14,7 +14,7 @@ ensure_sudo() {
   # Keep sudo alive while this script is running (avoid repeated password prompts).
   (
     while true; do
-      sudo -n true 2>/dev/null || true
+      sudo -n -v 2>/dev/null || true
       sleep 60
     done
   ) &

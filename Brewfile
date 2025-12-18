@@ -31,7 +31,6 @@ cask 'adobe-creative-cloud'
 
 
 # Font
-tap 'homebrew/cask-fonts'
 cask 'font-sf-mono'
 cask 'font-sf-pro'
 cask 'font-sf-compact'
