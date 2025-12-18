@@ -3,8 +3,21 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+SUDO_KEEPALIVE_PID=""
+
+cleanup_sudo_keepalive() {
+  if [[ -n "${SUDO_KEEPALIVE_PID:-}" ]]; then
+    kill "$SUDO_KEEPALIVE_PID" 2>/dev/null || true
+  fi
+}
+
 ensure_sudo() {
   if ! command -v sudo >/dev/null 2>&1; then
+    return
+  fi
+
+  if [[ -n "${SUDO_KEEPALIVE_PID:-}" ]] && kill -0 "$SUDO_KEEPALIVE_PID" 2>/dev/null; then
+    sudo -v
     return
   fi
 
@@ -15,11 +28,11 @@ ensure_sudo() {
   (
     while true; do
       sudo -n -v 2>/dev/null || true
-      sleep 60
+      sleep 30
     done
   ) &
-  local keepalive_pid=$!
-  trap 'kill "$keepalive_pid" 2>/dev/null || true' EXIT
+  SUDO_KEEPALIVE_PID=$!
+  trap cleanup_sudo_keepalive EXIT
 }
 
 install_dotfiles() {
@@ -66,6 +79,7 @@ eval_brew_shellenv() {
 
 install_brew_bundle() {
   echo "Install Homebrew packages..."
+  ensure_sudo
   eval_brew_shellenv
   brew bundle --file "$ROOT_DIR/Brewfile"
 }
